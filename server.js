@@ -24,5 +24,6 @@ db.on('error', error => console.error(error));
 db.once('open', () => console.log('Connected to Mongoose'));
 
 app.use('/', indexRouter);
+app.use('/login', require('./routes/login'));
 
 app.listen(3000);
